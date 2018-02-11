@@ -1,0 +1,269 @@
+@keyframes rotate{
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+#root{
+  height: 100%;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,PingFang SC,Source Han Sans CN,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  min-width:600px;
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  background: #999;
+  background-size:cover;
+}
+.App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.App.bg1{
+  background: rgba(0,0,0,0.8);
+}
+.App.bg2{
+  background: rgba(200,200,200,0.9);;
+  h1{
+   color:#000;
+  }
+}
+.applist{
+  flex:1;
+  ul{
+    margin:0;
+    padding: 0;
+    li{
+      padding: 0 20px;
+      height:36px;
+      line-height:36px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      background: #fafafa;
+      border-bottom: 1px solid #ccc;
+      &:hover{
+        background: #eaeaea;
+      }
+      p{
+        margin: 0;
+        line-height:36px;
+        .text1{
+          font-size: 16px;
+        }
+        .text2{
+          color:#999;
+          font-size:14px;
+        }
+      }
+      p.active{
+        color: green
+      }
+    }
+  }
+}
+.App-body{
+  flex: 1;
+  min-height: 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App-body .play{
+  height: 400px;
+  width:800px;
+
+  display: flex;
+  flex-direction: row;
+}
+.App-body .play .playleft{
+  width:600px;
+
+  h2{
+    color: #bbb;
+  }
+  .sub{
+    color: #bbb;
+  }
+  .voice{
+    display: flex;
+    flex-direction: row;
+    padding-left:10px;
+    width:150px;
+  }
+  .voice:hover  .progress{
+    display: block;
+    transition:1s;
+  }
+  .progress{
+    cursor:pointer;
+    display: none;
+    margin-top:10px;
+    margin-left:10px;
+    height:4px;
+    width:100px;
+    background: #fff;
+    &:hover{
+      box-shadow: 0 1px 2px #666;
+    }
+    .item1{
+      width:60%;
+      height:100%;
+      background:red;
+    }
+  }
+  .playbtn{
+    margin: 20px  0 0 0;
+    height:200px;
+    .playProgress{
+      height:4px;
+      flex:1;
+      background: #fff;
+      cursor:pointer;
+      &:hover{
+        box-shadow: 0 1px 2px #000;
+      }
+      .playItem{
+        height:100%;
+        width:60%;
+        background:#31c27c;
+      }
+    }
+    .icon-all{
+      margin: 20px 0 0 0;
+      flex:1;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      .icondiv{
+        width:120px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+  }
+}
+.App-body .play .playright{
+  margin-top:20px;
+  width:200px;
+  box-sizing: border-box;
+  padding-left:20px;
+  .play-pic{
+    height:180px;
+    width:180px;
+    img{
+      height:180px;
+      width:180px;
+      border-radius:50%;
+      box-shadow: 0 0 10px  #000000;
+      animation: rotate 25s linear infinite;
+      animation-play-state:running;
+    }
+    img.pause{
+      animation-play-state:paused;
+      -webkit-animation-play-state:paused;
+    }
+  }
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  display: flex;
+  background-color: transparent;
+
+  flex-direction: row;
+  flex-wrap:nowrap;
+
+  padding: 20px;
+  color: white;
+  height:50px;
+  box-sizing: content-box;
+  justify-content: space-around;
+  .div1{
+    flex:1;
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+.App-header img{
+  width: auto;
+  height:40px;
+}
+.App-header h1{
+  padding-left:20px;
+  margin-top:0;
+  width: 300px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.icon-volume {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(./static/img/icons.png) no-repeat;
+  background-size: 16px auto;
+  background-position: 0 -112px;
+  cursor: pointer;
+}
+.icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url(./static/img/icons.png) no-repeat;
+  background-size: 32px auto;
+  cursor: pointer;
+}
+.icon.prev {
+  background-position: 0 0;
+}
+.icon.playicon {
+  background-position: 0 -96px;
+}
+.icon.next {
+  background-position: 0 -32px;
+}
+.icon.repeat-cycle {
+  background-position: 0 -160px;
+}
+.icon.pause {
+  background-position: 0 -64px;
+}
+.icon-close{
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(./static/img/close.png) no-repeat;
+  background-size: 28px auto;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.iconlist{
+  display: inline-block;
+  width:30px;
+  height:30px;
+  background: url(./static/img/list.png) no-repeat center;
+  cursor:pointer;
+
+}

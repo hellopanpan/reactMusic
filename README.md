@@ -1,4 +1,4 @@
-# panpan
+# react music player
 
 > A React.js project
 

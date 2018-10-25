@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --port 8060 --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "start":  "node app.js"
   },
   "dependencies": {
     "less": "^2.7.3",
@@ -32,6 +33,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "express": "^4.16.4",
     "file-loader": "^1.1.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

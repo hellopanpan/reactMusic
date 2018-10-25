@@ -4,7 +4,7 @@ import './App.less';
 import {BrowserRouter,Switch, Route,Router,HashRouter,Link}from 'react-router-dom' ;
 import Header from "./Header"
 import PlayBody from "./PlayBody"
-import List from './List'
+import List from './list'
 import {connect} from "react-redux"
 import { MUSIC_LIST } from "./playlistFile"
 class App extends Component {

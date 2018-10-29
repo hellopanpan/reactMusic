@@ -18,8 +18,8 @@ class App extends Component {
   componentDidMount(){
     var that= this;
     $("#player").jPlayer({
-      ready: function () {
-        $(this).jPlayer("setMedia",{mp3: that.props.reducer1.file}).jPlayer("play")
+      ready() {
+        $(this).jPlayer("setMedia",{mp3: that.props.reducer1.file})
       },
       supplied: "mp3",
       wmode:"window",
@@ -51,11 +51,11 @@ class App extends Component {
         <div className={`App ${this.state.bg?'bg1':'bg2'}`}>
           <Header/>
           <Switch>
-            <Route exact path='/' render={(props)=> {
+            <Route exact path='/reactMusic' render={(props)=> {
                 return <PlayBody changebg={this.changebg.bind(this)}/>
               }
             }/>
-            <Route path='/list' render={(props)=> {
+            <Route path='/reactMusic/list' render={(props)=> {
                 return <List changebg={this.changebg.bind(this)}/>
               }
             }/>

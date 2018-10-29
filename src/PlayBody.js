@@ -11,7 +11,7 @@ class PlayBody extends Component {
       percent: "",
       duration: "",
       voice: "",
-      playstate: true,
+      playstate: false,
       flag: false
     }
   }
@@ -93,20 +93,13 @@ class PlayBody extends Component {
       payload: 'Learn Redux'
     });
     this.playItem.bind(this)();
+    this.setState({
+      playstate: true
+    })
   }
   componentWillMount(){
     var that= this;
     this.props.changebg("1");
-
-  /*  $("#player").jPlayer({
-      ready: function () {
-        $(this).jPlayer("setMedia",{mp3:"http://www.170mv.com/kw/other.web.ri01.sycdn.kuwo.cn/resource/n1/96/84/1523189814.mp3"}).jPlayer("play")
-      },
-      supplied: "mp3",
-      wmode:"window",
-    });*/
-    //alert();
-
     $("#player").bind($.jPlayer.event.timeupdate,(e)=>{
       this.setState({
         progress: Math.round(e.jPlayer.status.currentTime),
@@ -132,7 +125,7 @@ class PlayBody extends Component {
     })
   }
   componentWillUnmount() {
-    alert("componentWillUnmount");
+    // alert("componentWillUnmount");
   }
 
   progressChange(e){

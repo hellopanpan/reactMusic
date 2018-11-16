@@ -43,7 +43,7 @@ class PlayBody extends Component {
                 <div className="icondiv">
                   <i className='icon pre'onClick={this.playPre.bind(this)}>
                   </i>
-                  <i className={`icon ${this.state.playstate? 'playicon': 'pause'}`} onClick={this.pauseChange.bind(this)}>
+                  <i className={`icon ${this.state.playstate? 'pause': 'playicon'}`} onClick={this.pauseChange.bind(this)}>
                   </i>
                   <i className={'icon next'} onClick={this.playNext.bind(this)}>
                   </i>

@@ -16,7 +16,7 @@ class Header extends Component {
           <h1 className="App-title">React Music Player</h1>
           </div>
           <div className={'listdiv'}>
-            <Link to="/reactMusic/list" onClick={(e)=>{this.stopLink(e)}}>
+            <Link to="/list" onClick={(e)=>{this.stopLink(e)}}>
               <i className={'iconlist'}></i>
             </Link>
           </div>

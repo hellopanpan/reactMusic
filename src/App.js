@@ -51,11 +51,11 @@ class App extends Component {
         <div className={`App ${this.state.bg?'bg1':'bg2'}`}>
           <Header/>
           <Switch>
-            <Route exact path='/reactMusic' render={(props)=> {
+            <Route exact path='/' render={(props)=> {
                 return <PlayBody changebg={this.changebg.bind(this)}/>
               }
             }/>
-            <Route path='/reactMusic/list' render={(props)=> {
+            <Route path='/list' render={(props)=> {
                 return <List changebg={this.changebg.bind(this)}/>
               }
             }/>

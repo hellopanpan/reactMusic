@@ -13,7 +13,7 @@ class Header extends Component {
         <header className="App-header" onClick={this.comBack.bind(this)}>
           <div className={'div1'}>
           <img src={require('./static/img/logo.png')} />
-          <h1 className="App-title">React Music Player</h1>
+          <h1 className="App-title">Panpan Music Player</h1>
           </div>
           <div className={'listdiv'}>
             <Link to="/reactMusic/list" onClick={(e)=>{this.stopLink(e)}}>

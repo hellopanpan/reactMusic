@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+import './assets/jq-player.js'
+import logo from './logo.svg'
 import './App.less';
 import {BrowserRouter,Switch, Route,Router,HashRouter,Link}from 'react-router-dom' ;
 import Header from "./Header"
